@@ -1,7 +1,7 @@
 {
   "name": "Portal-de-DA-Justicia",
   "version": "1.0.0",
-  "description": "Portal de Datos - Plantilla",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,5 +20,9 @@
   "homepage": "https://github.com/RedCiudadana/Portal-de-DA-Justicia#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "elasticlunr": "^0.9.5",
+    "nunjucks": "^3.2.2"
   }
 }

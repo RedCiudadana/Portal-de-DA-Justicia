@@ -6,8 +6,8 @@ pagination:
   alias: datos
 tags:
   - datos
-  - {{datos.Nombre | slug}}
-permalink: "datos/{{datos.Institucion | slug}}/{{datos.Dependencia | slug}}/{{datos.Categoria | slug}}/{{datos.Nombre | slug}}/index.html"
+  - {{datos.Nombre}}
+permalink: "datos/{{datos.id}}/index.html"
 ---
 
 {% extends "base.njk" %}
@@ -17,13 +17,13 @@ permalink: "datos/{{datos.Institucion | slug}}/{{datos.Dependencia | slug}}/{{da
 {% block content %}
 <!-- Titlebar
 ================================================== -->
-<div class="single-page-header" data-background-image="images/single-job.jpg">
+<div class="single-page-header" data-background-image="../../images/single-job.jpg">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="single-page-header-inner">
 					<div class="left-side">
-						<div class="header-image"><a href="single-company-profile.html"><img src="images/company-logo-03a.png" alt=""></a></div>
+						<div class="header-image"><a href="single-company-profile.html"><img src="../../images/company-logo-03a.png" alt=""></a></div>
 						<div class="header-details">
 							<h3>{{datos.Nombre}}</h3>
 							<h5>{{datos.Institucion}}</h5>
@@ -31,7 +31,7 @@ permalink: "datos/{{datos.Institucion | slug}}/{{datos.Dependencia | slug}}/{{da
 							<ul>
 								<li><a href="single-company-profile.html"><i class="icon-material-outline-business"></i> King</a></li>
 								<li><div class="star-rating" data-rating="4.9"></div></li>
-								<li><img class="flag" src="images/flags/gb.svg" alt=""> United Kingdom</li>
+								<li><img class="flag" src="../../images/flags/gb.svg" alt=""> United Kingdom</li>
 								<li><div class="verified-badge-with-title">Verified</div></li>
 							</ul>
 						</div>
@@ -83,7 +83,7 @@ permalink: "datos/{{datos.Institucion | slug}}/{{datos.Dependencia | slug}}/{{da
 							<div class="job-listing-details">
 								<!-- Logo -->
 								<div class="job-listing-company-logo">
-									<img src="images/company-logo-02.png" alt="">
+									<img src="../../images/company-logo-02.png" alt="">
 								</div>
 
 								<!-- Details -->
@@ -111,7 +111,7 @@ permalink: "datos/{{datos.Institucion | slug}}/{{datos.Dependencia | slug}}/{{da
 							<div class="job-listing-details">
 								<!-- Logo -->
 								<div class="job-listing-company-logo">
-									<img src="images/company-logo-03.png" alt="">
+									<img src="../../images/company-logo-03.png" alt="">
 								</div>
 
 								<!-- Details -->

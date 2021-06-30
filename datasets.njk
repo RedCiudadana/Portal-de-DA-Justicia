@@ -62,11 +62,27 @@ permalink: "datos/{{datos.id}}/index.html"
 				<p>{{datos.Descripcion}}</p>
 			</div>
 
+			<!-- Atachments -->
 			<div class="single-page-section">
-				<h3 class="margin-bottom-30">Location</h3>
-				<div id="single-job-map-container">
-					<div id="singleListingMap" data-latitude="51.507717" data-longitude="-0.131095" data-map-icon="im im-icon-Hamburger"></div>
-					<a href="#" id="streetView">Street View</a>
+				<h3>Attachments</h3>
+				<div class="attachments-container" id="enlacePdf">
+					<a href="{{datos.Enalce1}}" class="attachment-box ripple-effect"><span>Project Brief</span><i>PDF</i></a>
+				</div>
+				<br>
+				<div class="attachments-container" id="enlaceWord">
+					<a href="{{datos.EnlaceWord}}" class="attachment-box ripple-effect"><span>Project Brief</span><i>Word</i></a>
+				</div>
+				<br>
+				<div class="attachments-container" id="enlaceExcel">
+					<a href="{{datos.EnlaceExcel}}" class="attachment-box ripple-effect"><span>Project Brief</span><i>Excel</i></a>
+				</div>
+				<br>
+				<div class="attachments-container" id="enlaceCsv">
+					<a href="{{datos.EnlaceCSV}}" class="attachment-box ripple-effect"><span>Project Brief</span><i>CSV</i></a>
+				</div>
+				<br>
+				<div class="attachments-container" id="enlaceJson">
+					<a href="{{datos.EnlaceJson}}" class="attachment-box ripple-effect"><span>Project Brief</span><i>Json</i></a>
 				</div>
 			</div>
 
@@ -214,4 +230,51 @@ permalink: "datos/{{datos.id}}/index.html"
 </div>
 {% endblock %}
 
-{% block body_javascripts %}{% endblock %}
+{% block body_javascripts %}
+
+<script>
+	window.onload=function() {
+		if("{{datos.Enlace1}}"==""||"{{datos.Enlace1}}"==" "){
+			var x = document.getElementById("enlacePdf");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+		if("{{datos.EnlaceWord}}"==""||"{{datos.EnlaceWord}}"==" "){
+			var x = document.getElementById("enlaceWord");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+		if("{{datos.EnlaceExcel}}"==""||"{{datos.EnlaceExcel}}"==" "){
+			var x = document.getElementById("enlaceExcel");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+		if("{{datos.EnlaceCSV}}"==""||"{{datos.EnlaceCSV}}"==" "){
+			var x = document.getElementById("enlaceCsv");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+		if("{{datos.EnlaceJson}}"==""||"{{datos.EnlaceJson}}"==" "){
+			var x = document.getElementById("enlaceJson");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+	}
+</script>
+
+{% endblock %}

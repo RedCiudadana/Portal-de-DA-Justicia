@@ -1,0 +1,68 @@
+---
+pagination:
+  data: categorias
+  size: 1
+  alias: categoria
+  addAllPagesToCollections: true
+permalink: "categorias/{{categoria.nombre | slug}}/index.html"
+tags:
+  - categoria
+---
+
+{% extends "base.njk" %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+
+    <div class="single-page-header" data-background-image="../../images/single-job.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="single-page-header-inner">
+                        <div class="left-side">
+                            <div class="header-image"><a href="single-company-profile.html"><img src="../../images/company-logo-03a.png" alt=""></a></div>
+                            <div class="header-details">
+                                <h3>{{categoria.nombre}}</h3>
+                                <!--ul>
+                                    <li><a href="single-company-profile.html"><i class="icon-material-outline-business"></i> King</a></li>
+                                    <li><div class="star-rating" data-rating="4.9"></div></li>
+                                    <li><img class="flag" src="../../images/flags/gb.svg" alt=""> United Kingdom</li>
+                                    <li><div class="verified-badge-with-title">Verified</div></li>
+                                </ul-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--CONTENIDO-->
+    <div class="w-100 bg-white">
+        <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+
+            {% for item in collections[categoria.nombre] %}
+                <div class="col-12 border">
+                <br>
+                <div>
+                    <a href="{{item.url}}">
+                    <h4 class="text-left">
+                        {{item.data.datos.nombre}}
+                    </h4>
+                    </a>
+
+                </div>
+                <br>
+                </div>
+                <br>
+            {% endfor %}
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+{% endblock %}

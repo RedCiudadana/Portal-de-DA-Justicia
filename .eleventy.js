@@ -12,4 +12,35 @@ module.exports = function(eleventyConfig){
 }
 
 
+//const searchFilter = require('./filters/searchFilter');
+
+const categorias = [
+    "Acceso a Justicia",
+    "Transparencia y anticorrupción",
+    "Derechos Humanos",
+    "Género",
+    "Instituciones de Justicia",
+    "Legislación",
+    "Poder Judicial",
+    "Política Criminal",
+    "Sistema Penitenciario",
+    "Sistema Registral",
+    "Pluralismo Juridico"
+];
+
+module.exports = function (eleventyConfig) {
+
+    categorias.forEach((categoria) => {
+        eleventyConfig.addCollection(categoria, function (collectionApi) {
+
+            let collection = collectionApi.getFilteredByTags('datos').filter(function (item) {
+                return item.data.datos.categoria === categoria;
+            });
+
+            return collection;
+        });
+    });
+
+    //eleventyConfig.addFilter("search", searchFilter);
+}
 

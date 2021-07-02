@@ -1,5 +1,5 @@
 ---
-permalink: "datasheet/index.html"
+permalink: "instituciones/index.html"
 ---
 
 {% extends "base.njk" %}
@@ -18,7 +18,7 @@ permalink: "datasheet/index.html"
 					<div class="left-side">
 						
 						<div class="header-details">
-							<h3>Datasets</h3>
+							<h3>Instituciones</h3>
 						</div>
 					</div>
 				</div>
@@ -156,7 +156,7 @@ permalink: "datasheet/index.html"
 			
 			<!-- Freelancers List Container -->
 			<div class="freelancers-container freelancers-list-layout compact-list margin-top-35">
-                {% for item in collections.datos %}
+                {% for item in collections.ins %}
                     <!--Freelancer -->
                     <div class="freelancer">
 
@@ -175,7 +175,7 @@ permalink: "datasheet/index.html"
 
                                 <!-- Name -->
                                 <div class="freelancer-name">
-                                    <h4><a href="{{item.url}}"> {{item.data.datos.Nombre}} <img class="flag" src="images/flags/gb.svg" alt="" title="United Kingdom" data-tippy-placement="top"></a></h4>
+                                    <h4><a href="{{item.url}}"> {{item.data.ins.nombre}} <img class="flag" src="images/flags/gb.svg" alt="" title="United Kingdom" data-tippy-placement="top"></a></h4>
                                     <span>UI/UX Designer</span>
 
                                     <!--{{item.data.Nombre}}-->

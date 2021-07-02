@@ -34,17 +34,19 @@ module.exports = function (eleventyConfig) {
         eleventyConfig.addCollection(categoria, function (collectionApi) {
 
             let collection = collectionApi.getFilteredByTags('datos').filter(function (item) {
-                return item.data.datos.categoria === categoria;
+                return item.data.datos.Categoria === categoria;
             });
 
             return collection;
         });
+    });
 
-        eleventyConfig.addCollection("datos", function(collectionApi) {
-            return collectionApi.getFilteredByTag("datos");
-          });
+    eleventyConfig.addCollection("datos", function(collectionApi) {
+        return collectionApi.getFilteredByTag('datos');
+    });
 
-
+    eleventyConfig.addCollection("ins", function(collectionApi) {
+        return collectionApi.getFilteredByTag('ins');
     });
 
     //eleventyConfig.addFilter("search", searchFilter);

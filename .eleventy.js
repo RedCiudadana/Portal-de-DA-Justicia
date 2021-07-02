@@ -39,6 +39,12 @@ module.exports = function (eleventyConfig) {
 
             return collection;
         });
+
+        eleventyConfig.addCollection("datos", function(collectionApi) {
+            return collectionApi.getFilteredByTag("datos");
+          });
+
+
     });
 
     //eleventyConfig.addFilter("search", searchFilter);

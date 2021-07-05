@@ -1,17 +1,3 @@
-module.exports = function (eleventyConfig) {
-    eleventyConfig.setTemplateFormats('css,png,jpg,njk,html,otf,ttf');
-    
-}
-
-module.exports = function(eleventyConfig){
-
-    eleventyConfig.addPassthroughCopy('css')
-    eleventyConfig.addPassthroughCopy('fonts')
-    eleventyConfig.addPassthroughCopy('images')
-    eleventyConfig.addPassthroughCopy('js')
-}
-
-
 //const searchFilter = require('./filters/searchFilter');
 
 const categorias = [
@@ -48,6 +34,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("ins", function(collectionApi) {
         return collectionApi.getFilteredByTag('ins');
     });
+
+    eleventyConfig.addPassthroughCopy('css');
+    eleventyConfig.addPassthroughCopy('fonts');
+    eleventyConfig.addPassthroughCopy('images');
+    eleventyConfig.addPassthroughCopy('js');
+
+    //eleventyConfig.setTemplateFormats('css,png,jpg,njk,html,otf,ttf');
 
     //eleventyConfig.addFilter("search", searchFilter);
 }

@@ -14293,7 +14293,6 @@ a.apply-now-button i {
 .attachment-box {
 	display: flex;
 	margin: 0 20px 20px 0;
-	background-color: #f4f4f4;
 	border-radius: 4px 0px 4px 4px;
 	font-weight: 600;
 	padding: 15px 20px;
@@ -14301,7 +14300,6 @@ a.apply-now-button i {
 	padding-right: 25px;
 	line-height: 24px;
 	flex-direction: column;
-	color: #666;
 	position: relative;
 	transition: 0.3s;
 	flex: 0 1 calc(50% - 21px);
@@ -14309,7 +14307,45 @@ a.apply-now-button i {
 	position: relative;
 }
 
-.single-page-section .attachment-box { flex: 0 1 calc(33% - 20px); }
+.attachment-box i{
+	color: #fff!important;
+}
+
+.attachment-box-pdf {
+	background-color: #e90505;
+	color: #fff;
+}
+
+.attachment-box-word {
+	background-color: #0f12d1;
+	color: #fff;
+}
+
+.attachment-box-excel {
+	background-color: #26d10f;
+	color: #fff;
+}
+
+.attachment-box-csv {
+	background-color: #f0e10d;
+	color: #fff;
+}
+
+.attachment-box-json {
+	background-color: #f1750e;
+	color: #fff;
+}
+
+.attachment-box-txt {
+	background-color: #f4f4f4;
+	color: #666;
+}
+
+.attachment-box:hover{
+	background-color: #222!important;
+}
+
+/*.single-page-section .attachment-box { flex: 0 1 calc(33% - 20px); }*/
 .single-page-section .attachments-container { margin-bottom: -20px; }
 
 a.attachment-box { cursor: pointer; }

@@ -1,0 +1,74 @@
+---
+permalink: "historias/index.html"
+---
+
+{% extends "base.njk" %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+
+<!-- Section -->
+<div class="section gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12 col-lg-12">
+
+				<!-- Section Headline -->
+				<div class="section-headline margin-top-60 margin-bottom-35">
+					<h4>Historias Recientes</h4>
+				</div>
+
+                {% for item in collections.historias %}
+                    <!-- Blog Post -->
+                    <a href="{{item.url}}" class="blog-post">
+                        <!-- Blog Post Thumbnail -->
+                        <div class="blog-post-thumbnail">
+                            <div class="blog-post-thumbnail-inner">
+                                <span class="blog-item-tag">Tips</span>
+                                <img src="{{item.data.hist.EnlaceImagen}}" alt="">
+                            </div>
+                        </div>
+                        <!-- Blog Post Content -->
+                        <div class="blog-post-content">
+                            <span class="blog-post-date">22 July 2019</span>
+                            <h3>{{item.data.hist.Titulo}}</h3>
+                            <p>{{item.data.hist.descripcion}}</p>
+                        </div>
+                        <!-- Icon -->
+                        <div class="entry-icon"></div>
+                    </a>
+                {% endfor %}
+
+				<!-- Pagination -->
+				<div class="clearfix"></div>
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Pagination -->
+						<div class="pagination-container margin-top-10 margin-bottom-20">
+							<nav class="pagination">
+								<ul>
+									<li><a href="#" class="current-page ripple-effect">1</a></li>
+									<li><a href="#" class="ripple-effect">2</a></li>
+									<li><a href="#" class="ripple-effect">3</a></li>
+									<li class="pagination-arrow"><a href="#" class="ripple-effect"><i class="icon-material-outline-keyboard-arrow-right"></i></a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<!-- Pagination / End -->
+
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Spacer -->
+	<div class="padding-top-40"></div>
+	<!-- Spacer -->
+
+</div>
+<!-- Section / End -->
+
+{% endblock %}

@@ -34,7 +34,7 @@ permalink: "datasheet/index.html"
 		<div class="col-xl-3 col-lg-4">
 			<div class="sidebar-container">
 				
-				<!-- Location -->
+				<!-- Location >
 				<div class="sidebar-widget">
 					<h3>Location</h3>
 					<div class="input-with-icon">
@@ -43,9 +43,9 @@ permalink: "datasheet/index.html"
 						</div>
 						<i class="icon-material-outline-location-on"></i>
 					</div>
-				</div>
+				</div-->
 
-				<!-- Category -->
+				<!-- Category >
 				<div class="sidebar-widget">
 					<h3>Category</h3>
 					<select class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="All Categories" >
@@ -60,14 +60,14 @@ permalink: "datasheet/index.html"
 						<option>Translation</option>
 						<option>Sales & Marketing</option>
 					</select>
-				</div>
+				</div-->
 
 				<!-- Keywords -->
 				<div class="sidebar-widget">
-					<h3>Keywords</h3>
+					<h3>Tags</h3>
 					<div class="keywords-container">
 						<div class="keyword-input-container">
-							<input type="text" class="keyword-input" placeholder="e.g. task title"/>
+							<input type="text" class="keyword-input" placeholder="e.j. justicia"/>
 							<button class="keyword-input-button ripple-effect"><i class="icon-material-outline-add"></i></button>
 						</div>
 						<div class="keywords-list"><!-- keywords go here --></div>
@@ -75,18 +75,18 @@ permalink: "datasheet/index.html"
 					</div>
 				</div>
 
-				<!-- Hourly Rate -->
+				<!-- Hourly Rate >
 				<div class="sidebar-widget">
 					<h3>Hourly Rate</h3>
 					<div class="margin-top-55"></div>
 
-					<!-- Range Slider -->
+					< Range Slider >
 					<input class="range-slider" type="text" value="" data-slider-currency="$" data-slider-min="10" data-slider-max="250" data-slider-step="5" data-slider-value="[10,250]"/>
-				</div>
+				</div-->
 
 				<!-- Tags -->
 				<div class="sidebar-widget">
-					<h3>Skills</h3>
+					<h3>Tags</h3>
 
 					<div class="tags-container">
 						<div class="tag">
@@ -105,30 +105,18 @@ permalink: "datasheet/index.html"
 							<input type="checkbox" id="tag4"/>
 							<label for="tag4">vue js</label>
 						</div>
-						<div class="tag">
-							<input type="checkbox" id="tag5"/>
-							<label for="tag5">web apps</label>
-						</div>
-						<div class="tag">
-							<input type="checkbox" id="tag6"/>
-							<label for="tag6">design</label>
-						</div>
-						<div class="tag">
-							<input type="checkbox" id="tag7"/>
-							<label for="tag7">wordpress</label>
-						</div>
 					</div>
 					<div class="clearfix"></div>
 
-					<!-- More Skills -->
+					<!-- More Skills >
 					<div class="keywords-container margin-top-20">
 						<div class="keyword-input-container">
 							<input type="text" class="keyword-input" placeholder="add more skills"/>
 							<button class="keyword-input-button ripple-effect"><i class="icon-material-outline-add"></i></button>
 						</div>
-						<div class="keywords-list"><!-- keywords go here --></div>
+						<div class="keywords-list">< keywords go here ></div>
 						<div class="clearfix"></div>
-					</div>
+					</div-->
 				</div>
 				<div class="clearfix"></div>
 
@@ -171,7 +159,7 @@ permalink: "datasheet/index.html"
                                 <!-- Avatar -->
                                 <div class="freelancer-avatar">
                                     <div class="verified-badge"></div>
-                                    <a href="single-freelancer-profile.html"><img src="images/user-avatar-big-01.jpg" alt=""></a>
+                                    <a href="{{item.url}}"><img src="{{item.data.datos.EnlaceImagen}}" alt=""></a>
                                 </div>
 
                                 <!-- Name -->

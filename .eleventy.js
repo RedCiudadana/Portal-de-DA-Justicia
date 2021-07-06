@@ -35,6 +35,10 @@ module.exports = function (eleventyConfig) {
         return collectionApi.getFilteredByTag('ins');
     });
 
+    eleventyConfig.addCollection("historias", function(collectionApi) {
+        return collectionApi.getFilteredByTag('hist');
+    });
+
     eleventyConfig.addPassthroughCopy('css');
     eleventyConfig.addPassthroughCopy('fonts');
     eleventyConfig.addPassthroughCopy('images');

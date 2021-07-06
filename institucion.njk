@@ -24,12 +24,12 @@ tags:
 					<div class="left-side">
 						<div class="header-image"><img src="{{ins.fotoURL}}" alt=""></div>
 						<div class="header-details">
-							<h3> {{ins.nombre}} <span> {{ins.sector}} </span></h3>
-							<ul>
+							<h3> {{ins.nombre}} <span> {{ins.direccion}} </span></h3>
+							<!--ul>
 								<li><div class="star-rating" data-rating="4.9"></div></li>
 								<li><img class="flag" src="images/flags/de.svg" alt=""> Germany</li>
 								<li><div class="verified-badge-with-title">Verified</div></li>
-							</ul>
+							</ul-->
 						</div>
 					</div>
 					<div class="right-side">
@@ -37,7 +37,7 @@ tags:
 						<nav id="breadcrumbs" class="white">
 							<ul>
 								<li><a href="/index.html">Inicio</a></li>
-								<li><a href="/instituciones.html">Instituciones</a></li>
+								<li><a href="/instituciones/index.html">Instituciones</a></li>
 								<li>{{ins.nombre}}</li>
 							</ul>
 						</nav>
@@ -126,7 +126,7 @@ tags:
 			</div>
 			<!-- Boxed List / End -->
 
-			<!-- Boxed List -->
+			<!-- Boxed List >
 			<div class="boxed-list margin-bottom-60">
 				<div class="boxed-list-headline">
 					<h3><i class="icon-material-outline-thumb-up"></i> Reviews</h3>
@@ -134,7 +134,7 @@ tags:
 				<ul class="boxed-list-ul">
 					<li>
 						<div class="boxed-list-item">
-							<!-- Content -->
+							< Content >
 							<div class="item-content">
 								<h4>Doing things the right way <span>Anonymous Employee</span></h4>
 								<div class="item-details margin-top-10">
@@ -149,7 +149,7 @@ tags:
 					</li>
 					<li>
 						<div class="boxed-list-item">
-							<!-- Content -->
+							< Content >
 							<div class="item-content">
 								<h4>Outstanding Work Environment <span>Anonymous Employee</span></h4>
 								<div class="item-details margin-top-10">
@@ -169,7 +169,7 @@ tags:
 				</div>
 
 			</div>
-			<!-- Boxed List / End -->
+			< Boxed List / End -->
 
 		</div>
 		
@@ -179,23 +179,44 @@ tags:
 			<div class="sidebar-container">
 
 				<!-- Location -->
+				<!-- Sidebar Widget -->
 				<div class="sidebar-widget">
-					<h3>Location</h3>
-					<div id="single-job-map-container">
-						<div id="singleListingMap" data-latitude="52.520007" data-longitude="13.404954" data-map-icon="im im-icon-Hamburger"></div>
-						<a href="#" id="streetView">Street View</a>
+					<div class="job-overview">
+						<div class="job-overview-headline">Información Adicional</div>
+						<div class="job-overview-inner">
+							<ul>
+								<!--Web-->
+								<li>
+									<i class="icon-material-outline-language"></i>
+									<span>Web</span>
+									<h5>{{ins.web}}</h5>
+								</li>
+								<!--Correo-->
+								<li>
+									<i class="icon-material-baseline-mail-outline"></i>
+									<span>Correo</span>
+									<h5>{{ins.correo}}</h5>
+								</li>
+								<!--Teléfono-->
+								<li>
+									<i class="icon-feather-phone"></i>
+									<span>Teléfono</span>
+									<h5>{{ins.telefono}}</h5>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 
 				<!-- Widget -->
 				<div class="sidebar-widget">
-					<h3>Social Profiles</h3>
+					<h3>Redes</h3>
 					<div class="freelancer-socials margin-top-25">
 						<ul>
-							<li><a href="#" title="Dribbble" data-tippy-placement="top"><i class="icon-brand-dribbble"></i></a></li>
-							<li><a href="#" title="Twitter" data-tippy-placement="top"><i class="icon-brand-twitter"></i></a></li>
-							<li><a href="#" title="Behance" data-tippy-placement="top"><i class="icon-brand-behance"></i></a></li>
-							<li><a href="#" title="GitHub" data-tippy-placement="top"><i class="icon-brand-github"></i></a></li>
+							<li><a href="{{ins.fb}}" title="Facebook" data-tippy-placement="top"><i class="icon-brand-facebook"></i></a></li>
+							<li><a href="{{ins.tw}}" title="Twitter" data-tippy-placement="top"><i class="icon-brand-twitter"></i></a></li>
+							<!--li><a href="#" title="Behance" data-tippy-placement="top"><i class="icon-brand-behance"></i></a></li>
+							<li><a href="#" title="GitHub" data-tippy-placement="top"><i class="icon-brand-github"></i></a></li-->
 						
 						</ul>
 					</div>
@@ -203,14 +224,14 @@ tags:
 
 				<!-- Sidebar Widget -->
 				<div class="sidebar-widget">
-					<h3>Bookmark or Share</h3>
+					<h3>Share</h3>
 
-					<!-- Bookmark Button -->
+					<!-- Bookmark Button >
 					<button class="bookmark-button margin-bottom-25">
 						<span class="bookmark-icon"></span>
 						<span class="bookmark-text">Bookmark</span>
 						<span class="bookmarked-text">Bookmarked</span>
-					</button>
+					</button-->
 
 					<!-- Copy URL -->
 					<div class="copy-url">

@@ -43,7 +43,7 @@ tags:
 		<div class="col-xl-3 col-lg-4">
 			<div class="sidebar-container">
 				
-				<!-- Location -->
+				<!-- Location >
 				<div class="sidebar-widget">
 					<h3>Location</h3>
 					<div class="input-with-icon">
@@ -54,7 +54,7 @@ tags:
 					</div>
 				</div>
 
-				<!-- Category -->
+				< Category >
 				<div class="sidebar-widget">
 					<h3>Category</h3>
 					<select class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="All Categories" >
@@ -71,7 +71,7 @@ tags:
 					</select>
 				</div>
 
-				<!-- Keywords -->
+				< Keywords >
 				<div class="sidebar-widget">
 					<h3>Keywords</h3>
 					<div class="keywords-container">
@@ -79,21 +79,21 @@ tags:
 							<input type="text" class="keyword-input" placeholder="e.g. task title"/>
 							<button class="keyword-input-button ripple-effect"><i class="icon-material-outline-add"></i></button>
 						</div>
-						<div class="keywords-list"><!-- keywords go here --></div>
+						<div class="keywords-list">< keywords go here ></div>
 						<div class="clearfix"></div>
 					</div>
 				</div>
 
-				<!-- Hourly Rate -->
+				< Hourly Rate >
 				<div class="sidebar-widget">
 					<h3>Hourly Rate</h3>
 					<div class="margin-top-55"></div>
 
-					<!-- Range Slider -->
+					< Range Slider >
 					<input class="range-slider" type="text" value="" data-slider-currency="$" data-slider-min="10" data-slider-max="250" data-slider-step="5" data-slider-value="[10,250]"/>
-				</div>
+				</div-->
 
-				<!-- Tags -->
+				<!-- Tags >
 				<div class="sidebar-widget">
 					<h3>Skills</h3>
 
@@ -127,7 +127,7 @@ tags:
 							<label for="tag7">wordpress</label>
 						</div>
 					</div>
-					<div class="clearfix"></div>
+					<div class="clearfix"></div-->
 
 					<!-- More Skills -->
 					<div class="keywords-container margin-top-20">
@@ -179,13 +179,13 @@ tags:
                                 <!-- Avatar -->
                                 <div class="freelancer-avatar">
                                     <div class="verified-badge"></div>
-                                    <a href="single-freelancer-profile.html"><img src="images/user-avatar-big-01.jpg" alt=""></a>
+                                    <a href="{{item.url}}"><img src="{{item.data.datos.EnlaceImagen}}" alt=""></a>
                                 </div>
 
                                 <!-- Name -->
                                 <div class="freelancer-name">
                                     <h4><a href="{{item.url}}"> {{item.data.datos.Nombre}} <img class="flag" src="images/flags/gb.svg" alt="" title="United Kingdom" data-tippy-placement="top"></a></h4>
-                                    <span>UI/UX Designer</span>
+                                    <span>{{item.data.datos.Institucion}}</span>
 
                                     <!--{{item.data.Nombre}}-->
                                     <!-- Rating -->

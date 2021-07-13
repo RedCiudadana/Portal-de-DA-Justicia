@@ -1,16 +1,16 @@
 ---
-permalink: "datasheet/index.html"
+permalink: "datasets/index.html"
 ---
 
 {% extends "base.njk" %}
 
 {% block head %}
 
-<link rel="stylesheet" href="/jquery.paginate.css" />
-
 {% endblock %}
 
 {% block content %}
+
+
 
 <!-- Titlebar
 ================================================== -->
@@ -148,80 +148,72 @@ permalink: "datasheet/index.html"
 			</div-->
 			
 			<!-- Freelancers List Container -->
-			<div class="freelancers-container freelancers-list-layout compact-list margin-top-35">
-                {% for item in collections.datos %}
-                    <!--Freelancer -->
-                    <div class="freelancer" id="">
+		<div class="paginate">
+			<div class="freelancers-container freelancers-list-layout compact-list margin-top-35  1">
+			{% for item in collections.datos %}
+				<!--Freelancer -->
+				<div class="freelancer items" id="">
 
-                        <!-- Overview -->
-                        <div class="freelancer-overview">
-                            <div class="freelancer-overview-inner">
-                                
-                                <!-- Bookmark Icon -->
-                                <span class="bookmark-icon"></span>
-                                
-                                <!-- Avatar -->
-                                <div class="freelancer-avatar">
-                                    <div class="verified-badge"></div>
-                                    <a href="{{item.url}}"><img src="{{item.data.datos.EnlaceImagen}}" alt=""></a>
-                                </div>
+					<!-- Overview -->
+					<div class="freelancer-overview">
+						<div class="freelancer-overview-inner">
+							
+							<!-- Bookmark Icon -->
+							<span class="bookmark-icon"></span>
+							
+							<!-- Avatar -->
+							<div class="freelancer-avatar">
+								<div class="verified-badge"></div>
+								<a href="{{item.url}}"><img src="{{item.data.datos.EnlaceImagen}}" alt=""></a>
+							</div>
 
-                                <!-- Name -->
-                                <div class="freelancer-name">
-                                    <h4><a href="{{item.url}}"> {{item.data.datos.Nombre}} <img class="flag" src="images/flags/gb.svg" alt="" title="United Kingdom" data-tippy-placement="top"></a></h4>
-                                    <span>{{item.data.datos.Institucion}}</span>
+							<!-- Name -->
+							<div class="freelancer-name">
+								<h4><a href="{{item.url}}"> {{item.data.datos.Nombre}} <img class="flag" src="images/flags/gb.svg" alt="" title="United Kingdom" data-tippy-placement="top"></a></h4>
+								<span>{{item.data.datos.Institucion}}</span>
 
-                                    <!--{{item.data.Nombre}}-->
-                                    <!-- Rating -->
-                                    <div class="freelancer-rating">
-                                        <div class="star-rating" data-rating="4.9"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Details -->
-                        <div class="freelancer-details">
-                            <div class="freelancer-details-list">
-                                <ul>
-                                    <!--li>Location <strong><i class="icon-material-outline-location-on"></i> London</strong></li>
-                                    <li>Rate <strong>$60 / hr</strong></li>
-                                    <li>Job Success <strong>95%</strong></li-->
-									<li>{{item.data.datos.Tags}}</li>
-                                </ul>
-                            </div>
-                            <a href="{{item.url}}" class="button button-sliding-icon ripple-effect">Explorar<i class="icon-material-outline-arrow-right-alt"></i></a>
-                        </div>
-                    </div>
-                    <!-- Freelancer / End -->
-                {% endfor %}
+								<!--{{item.data.Nombre}}-->
+								<!-- Rating -->
+								<div class="freelancer-rating">
+									<div class="star-rating" data-rating="4.9"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Details -->
+					<div class="freelancer-details">
+						<div class="freelancer-details-list">
+							<ul>
+								<!--li>Location <strong><i class="icon-material-outline-location-on"></i> London</strong></li>
+								<li>Rate <strong>$60 / hr</strong></li>
+								<li>Job Success <strong>95%</strong></li-->
+								<li>{{item.data.datos.Tags}}</li>
+							</ul>
+						</div>
+						<a href="{{item.url}}" class="button button-sliding-icon ripple-effect">Explorar<i class="icon-material-outline-arrow-right-alt"></i></a>
+					</div>
+				</div>
+				<!-- Freelancer / End -->
+			{% endfor %}
+
+				
 				
 
 	
 			</div>
 			<!-- Freelancers Container / End -->
 
-
 			<!-- Pagination -->
-			<div class="clearfix"></div>
-			<div class="row">
-				<div class="col-md-12">
-					<!-- Pagination -->
-					<div class="pagination-container margin-top-40 margin-bottom-60">
-						<nav class="pagination">
-							<ul>
-								<li class="pagination-arrow"><a href="#" class="ripple-effect"><i class="icon-material-outline-keyboard-arrow-left"></i></a></li>
-								<li><a href="#" class="current-page ripple-effect">1</a></li>
-								<li><a href="#" class="ripple-effect">2</a></li>
-								<li><a href="#" class="ripple-effect">3</a></li>
-								<li><a href="#" class="ripple-effect">4</a></li>
-								<li class="pagination-arrow"><a href="#" class="ripple-effect"><i class="icon-material-outline-keyboard-arrow-right"></i></a></li>
-							</ul>
-						</nav>
-					</div>
+				<div class="pager pag" >
+					<div class="firstPage">&laquo;</div>
+					<div class="previousPage">&lsaquo;</div>
+					<div class="pageNumbers"></div>
+					<div class="nextPage">&rsaquo;</div>
+					<div class="lastPage">&raquo;</div>
 				</div>
-			</div>
 			<!-- Pagination / End -->
+		</div>	
 
 		</div>
 	</div>
@@ -231,11 +223,14 @@ permalink: "datasheet/index.html"
 
 {% block body_javascripts %}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="/jquery.paginate.js"></script>
 
+<script src="https://cdn.rawgit.com/mrk-j/paginga/v0.8.1/paginga.jquery.min.js"></script>
 <script>
-  $(#freelancer).paginate({ 'perPage': 5, scope: $('div') });
+$(".paginate").paginga({
+	item:"> div",
+	itemsPerPage: 50,
+
+});
 </script>
 
 

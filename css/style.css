@@ -17079,3 +17079,63 @@ ul.dashboard-box-list > li:hover {
 #footer li{
 	list-style: none!important;
 }
+
+.pag{
+	display: flex;
+    margin: auto;
+    padding: 20px 0 5% 0;
+}
+
+.firstPage,.previousPage,.nextPage,.lastPage{
+	border-radius: 4px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    line-height: 44px;
+	background-color: #f0f0f0;
+	margin: 5px;
+	text-align: center;
+}
+
+.firstPage,.previousPage,.nextPage,.lastPage :hover{
+	cursor: pointer;
+}
+.lastPage:hover{
+	cursor: pointer;
+}
+
+.pageNumbers a{
+	border-radius: 4px;
+    width: 44px;
+    height: 44px;
+    padding: 4px;
+    line-height: 44px;
+	margin: 1px;
+	text-align: center;
+	color: #222;
+}
+
+.pageNumbers a:hover{
+	color:#fff!important;
+	background-color: #262626;
+}
+
+.pageNumbers{
+	padding-top: 5px;
+}
+
+.active{
+	border-radius: 4px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    line-height: 44px;
+	background-color: rgb(42, 65, 232);
+	margin: 5px;
+	text-align: center;
+	color:#fff!important;
+}
+
+
+
+

@@ -17084,6 +17084,7 @@ ul.dashboard-box-list > li:hover {
 	display: flex;
     margin: auto;
     padding: 20px 0 5% 0;
+	justify-content: center;
 }
 
 .firstPage,.previousPage,.nextPage,.lastPage{

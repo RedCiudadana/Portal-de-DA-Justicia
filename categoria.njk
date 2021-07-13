@@ -162,12 +162,12 @@ tags:
 					</select>
 				</div>
 			</div-->
-			
+			<div class="paginate">
 			<!-- Freelancers List Container -->
 			<div class="freelancers-container freelancers-list-layout compact-list margin-top-35">
                 {% for item in collections[categoria.nombre] %}
                     <!--Freelancer -->
-                    <div class="freelancer">
+                    <div class="freelancer items">
 
                         <!-- Overview -->
                         <div class="freelancer-overview">
@@ -217,28 +217,33 @@ tags:
 
 
 			<!-- Pagination -->
-			<div class="clearfix"></div>
-			<div class="row">
-				<div class="col-md-12">
-					<!-- Pagination -->
-					<div class="pagination-container margin-top-40 margin-bottom-60">
-						<nav class="pagination">
-							<ul>
-								<li class="pagination-arrow"><a href="#" class="ripple-effect"><i class="icon-material-outline-keyboard-arrow-left"></i></a></li>
-								<li><a href="#" class="ripple-effect">1</a></li>
-								<li><a href="#" class="current-page ripple-effect">2</a></li>
-								<li><a href="#" class="ripple-effect">3</a></li>
-								<li><a href="#" class="ripple-effect">4</a></li>
-								<li class="pagination-arrow"><a href="#" class="ripple-effect"><i class="icon-material-outline-keyboard-arrow-right"></i></a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
+			<div class="pager pag" >
+				<div class="firstPage">&laquo;</div>
+				<div class="previousPage">&lsaquo;</div>
+				<div class="pageNumbers"></div>
+				<div class="nextPage">&rsaquo;</div>
+				<div class="lastPage">&raquo;</div>
 			</div>
 			<!-- Pagination / End -->
+			</div>
 
 		</div>
 	</div>
 </div>
+
+{% endblock %}
+
+{% block body_javascripts %}
+
+
+<script src="https://cdn.rawgit.com/mrk-j/paginga/v0.8.1/paginga.jquery.min.js"></script>
+<script>
+$(".paginate").paginga({
+	item:"> div",
+	itemsPerPage: 30,
+
+});
+</script>
+
 
 {% endblock %}

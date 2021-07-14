@@ -94,7 +94,7 @@ permalink: "index.html"
 						<!-- Category Box -->
 						<a href="{{item.url}}" class="category-box">
 							<div class="category-box-icon">
-								<img src="{{item.data.categoria.imagen}}" style="width:50%">
+								<img src="{{item.data.categoria.imagen}}" style="width:50%;margin-bottom:10px;">
 							</div>
 							{% for item in collections[item.data.categoria.nombre] %}
 								{% if loop.length==loop.index %}

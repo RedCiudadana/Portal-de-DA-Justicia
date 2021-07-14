@@ -17100,9 +17100,13 @@ ul.dashboard-box-list > li:hover {
 
 .firstPage,.previousPage,.nextPage,.lastPage :hover{
 	cursor: pointer;
+	color:#fff!important;
+	background-color: #262626;
 }
 .lastPage:hover{
 	cursor: pointer;
+	color:#fff!important;
+	background-color: #262626;
 }
 
 .pageNumbers a{

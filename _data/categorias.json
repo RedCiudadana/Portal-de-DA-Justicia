@@ -1,36 +1,47 @@
 
 [
     {
-        "nombre": "Acceso a Justicia"
+        "nombre": "Acceso a Justicia",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-11.png"
     },
     {
-        "nombre": "Transparencia y anticorrupción"
+        "nombre": "Transparencia y anticorrupción",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-12.png"
     },
     {
-        "nombre": "Derechos Humanos"
+        "nombre": "Derechos Humanos",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-13.png"
     },
     {
-        "nombre": "Género"
+        "nombre": "Género",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-14.png"
     },
     {
-        "nombre": "Instituciones de Justicia"
+        "nombre": "Instituciones de Justicia",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-15.png"
     },
     {
-        "nombre": "Legislación"
+        "nombre": "Legislación",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-16.png"
     },
     {
-        "nombre": "Poder Judicial"
+        "nombre": "Poder Judicial",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-17.png"
     },
     {
-        "nombre": "Política Criminal"
+        "nombre": "Política Criminal",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-18.png"
     },
     {
-        "nombre": "Sistema Penitenciario"
+        "nombre": "Sistema Penitenciario",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-19.png"
     },
     {
-        "nombre": "Sistema Registral"
+        "nombre": "Sistema Registral",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-20.png"
     },
     {
-        "nombre": "Pluralismo Juridico"
+        "nombre": "Pluralismo Juridico",
+        "imagen": "images/ELEMENTOS WEB/03_ICONOS/ICONOS-21.png"
     }
 ]

@@ -16,6 +16,11 @@ const categorias = [
 
 module.exports = function (eleventyConfig) {
 
+    eleventyConfig.addPassthroughCopy('css');
+    eleventyConfig.addPassthroughCopy('fonts');
+    eleventyConfig.addPassthroughCopy('images');
+    eleventyConfig.addPassthroughCopy('js');
+
     categorias.forEach((categoria) => {
         eleventyConfig.addCollection(categoria, function (collectionApi) {
 
@@ -39,10 +44,7 @@ module.exports = function (eleventyConfig) {
         return collectionApi.getFilteredByTag('hist');
     });
 
-    eleventyConfig.addPassthroughCopy('css');
-    eleventyConfig.addPassthroughCopy('fonts');
-    eleventyConfig.addPassthroughCopy('images');
-    eleventyConfig.addPassthroughCopy('js');
+    
 
     //eleventyConfig.setTemplateFormats('css,png,jpg,njk,html,otf,ttf');
 

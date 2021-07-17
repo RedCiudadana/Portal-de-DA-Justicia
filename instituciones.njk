@@ -18,7 +18,7 @@ permalink: "instituciones/index.html"
 					<div class="left-side">
 						
 						<div class="header-details">
-							<h3>Instituciones</h3>
+							<h3 style="color:#fff">Instituciones</h3>
 						</div>
 					</div>
 				</div>
@@ -64,13 +64,13 @@ permalink: "instituciones/index.html"
 
 				<!-- Keywords >
 				<div class="sidebar-widget">
-					<h3>Keywords</h3>
+					<h3>Tags</h3>
 					<div class="keywords-container">
 						<div class="keyword-input-container">
-							<input type="text" class="keyword-input" placeholder="e.g. task title"/>
+							<input type="text" class="keyword-input" placeholder="e.j. justicia"/>
 							<button class="keyword-input-button ripple-effect"><i class="icon-material-outline-add"></i></button>
 						</div>
-						<div class="keywords-list">< keywords go here ></div>
+						<div class="keywords-list"></div>
 						<div class="clearfix"></div>
 					</div>
 				</div-->
@@ -84,7 +84,7 @@ permalink: "instituciones/index.html"
 					<input class="range-slider" type="text" value="" data-slider-currency="$" data-slider-min="10" data-slider-max="250" data-slider-step="5" data-slider-value="[10,250]"/>
 				</div-->
 
-				<Tags >
+				<!--Tags >
 				<div class="sidebar-widget">
 					<h3>Tags</h3>
 
@@ -118,7 +118,7 @@ permalink: "instituciones/index.html"
 							<label for="tag7">wordpress</label>
 						</div>
 					</div>
-					<div class="clearfix"></div>
+					<div class="clearfix"></div-->
 
 					<!-- More Skills >
 					<div class="keywords-container margin-top-20">
@@ -134,7 +134,7 @@ permalink: "instituciones/index.html"
 
 			</div>
 		</div>
-		<div class="col-xl-9 col-lg-8 content-left-offset">
+		<div class="col-xl-9 col-lg-8 content-left-offset" style="margin:auto">
 
 			<!--h3 class="page-title">Search Results</h3>
 
@@ -155,51 +155,39 @@ permalink: "instituciones/index.html"
 			</div-->
 			<div class="paginate">
 			<!-- Freelancers List Container -->
-			<div class="freelancers-container freelancers-list-layout compact-list margin-top-35">
+			<div class="freelancers-container freelancers-grid-layout margin-top-35" >
                 {% for item in collections.ins %}
-                    <!--Freelancer -->
-                    <div class="freelancer items">
+					<!--Freelancer -->
+					<div class="freelancer items">
 
-                        <!-- Overview -->
-                        <div class="freelancer-overview">
-                            <div class="freelancer-overview-inner">
-                                
-                                <!-- Bookmark Icon -->
-                                <span class="bookmark-icon"></span>
-                                
-                                <!-- Avatar -->
+						<!-- Overview -->
+						<div class="freelancer-overview">
+							<div class="freelancer-overview-inner">
+								
+								<!-- Bookmark Icon -->
+								<span class="bookmark-icon"></span>
+								
+								<!-- Avatar -->
                                 <div class="freelancer-avatar">
                                     <div class="verified-badge"></div>
                                     <a href="{{item.url}}"><img src="{{item.data.ins.fotoURL}}" alt=""></a>
                                 </div>
 
-                                <!-- Name -->
-                                <div class="freelancer-name">
-                                    <h4><a href="{{item.url}}"> {{item.data.ins.nombre}} <img class="flag" src="images/flags/gb.svg" alt="" title="United Kingdom" data-tippy-placement="top"></a></h4>
-                                    <!--span>{{item.data.ins.direccion}}</span-->
-
-                                    <!--{{item.data.Nombre}}-->
-                                    <!-- Rating -->
-                                    <!--div class="freelancer-rating">
-                                        <div class="star-rating" data-rating="4.9"></div>
-                                    </div-->
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Details -->
-                        <div class="freelancer-details">
-                            <div class="freelancer-details-list">
-                                <ul>
-                                    <!--li>Location <strong><i class="icon-material-outline-location-on"></i> London</strong></li>
-                                    <li>Rate <strong>$60 / hr</strong></li>
-                                    <li>Job Success <strong>95%</strong></li-->
-                                </ul>
-                            </div>
-                            <a href="{{item.url}}" class="button button-sliding-icon ripple-effect">Explorar <i class="icon-material-outline-arrow-right-alt"></i></a>
-                        </div>
-                    </div>
-                    <!-- Freelancer / End -->
+								<!-- Name -->
+								<div class="freelancer-name">
+									<h4><a href="{{item.url}}"> {{item.data.ins.nombre}} <img class="flag" src="images/flags/gb.svg" alt="" title="United Kingdom" data-tippy-placement="top"></a></h4>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Details -->
+						<div class="freelancer-details">
+							
+							<a href="{{item.url}}" class="button button-sliding-icon ripple-effect">View Profile <i class="icon-material-outline-arrow-right-alt"></i></a>
+						</div>
+					</div>
+					<!-- Freelancer / End -->
+                    
                 {% endfor %}
 				
 

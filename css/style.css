@@ -2953,7 +2953,7 @@ body #backtotop a {
     top: 0;
     left: 0;
     z-index: 15;
-    background: linear-gradient(to right,rgba(247,247,247,1) 50%,rgba(247,247,247,0.8) 70%,rgba(247,247,247,0.8) 90%);
+    background: linear-gradient(to right,rgba(0,107,227,1) 100%,rgba(247,247,247,0.8) 70%,rgba(247,247,247,0.8) 90%);
 }
 
 .single-page-header:after {
@@ -7497,9 +7497,9 @@ input:checked + .switch-button:before {
     top: 0;
     left: 0;
     z-index: 15;
-    background: linear-gradient(to right,rgba(250,250,250,1) 20%, rgba(250,250,250,.95) 50% ,rgba(250,250,250,0.1) 80%,rgba(250,250,250,0) 100%);
+    background: linear-gradient(to right,rgba(0,107,227,1) 100% , rgba(250,250,250,.95) 50% ,rgba(250,250,250,0.1) 80%,rgba(250,250,250,0) 100%);
 }
-
+/*rgba(250,250,250,1) 20%*/
 .intro-banner:after {
     z-index: 5;
     background-color: #fafafa;
@@ -17098,7 +17098,18 @@ ul.dashboard-box-list > li:hover {
 	text-align: center;
 }
 
-.firstPage,.previousPage,.nextPage,.lastPage :hover{
+.firstPage:hover{
+	cursor: pointer;
+	color:#fff!important;
+	background-color: #262626;
+}
+.previousPage:hover{
+	cursor: pointer;
+	color:#fff!important;
+	background-color: #262626;
+}
+
+.nextPage:hover{
 	cursor: pointer;
 	color:#fff!important;
 	background-color: #262626;

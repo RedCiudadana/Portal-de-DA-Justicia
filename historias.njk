@@ -8,18 +8,33 @@ permalink: "historias/index.html"
 
 {% block content %}
 
+<div class="single-page-header" data-background-image="../../images/single-job.jpg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="single-page-header-inner">
+					<div class="left-side">
+						
+						<div class="header-details">
+							<h3 style="color:#fff">Historias de Datos</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- Section -->
 <div class="section gray">
 	<div class="container">
 		<div class="row">
-			<div class="col-xl-12 col-lg-12">
+			
 
-				<!-- Section Headline -->
-				<div class="section-headline margin-top-60 margin-bottom-35">
-					<h4>Historias Recientes</h4>
-				</div>
-
-                {% for item in collections.historias %}
+				
+				
+                {% for item in collections.historias %}	
+					<div class="col-12 col-lg-6">
                     <!-- Blog Post -->
                     <a href="{{item.data.hist.EnlaceWeb}}" target="_blank" class="blog-post">
                         <!-- Blog Post Thumbnail -->
@@ -38,28 +53,12 @@ permalink: "historias/index.html"
                         <!-- Icon -->
                         <div class="entry-icon"></div>
                     </a>
-                {% endfor %}
-
-				<!-- Pagination -->
-				<div class="clearfix"></div>
-				<div class="row">
-					<div class="col-md-12">
-						<!-- Pagination -->
-						<div class="pagination-container margin-top-10 margin-bottom-20">
-							<nav class="pagination">
-								<ul>
-									<li><a href="#" class="current-page ripple-effect">1</a></li>
-									<li><a href="#" class="ripple-effect">2</a></li>
-									<li><a href="#" class="ripple-effect">3</a></li>
-									<li class="pagination-arrow"><a href="#" class="ripple-effect"><i class="icon-material-outline-keyboard-arrow-right"></i></a></li>
-								</ul>
-							</nav>
-						</div>
 					</div>
-				</div>
-				<!-- Pagination / End -->
+                {% endfor %}
+				
+				
 
-			</div>
+			
 
 		</div>
 	</div>

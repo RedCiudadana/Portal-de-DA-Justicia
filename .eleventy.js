@@ -14,6 +14,20 @@ const categorias = [
     "Pluralismo Juridico"
 ];
 
+const instituciones = [
+    "Corte Suprema de Justicia (CSJ)",
+    "Corte de Apelaciones (CA)",
+    "Juzgados de Primera Instancia",
+    "Juzgados de Paz o Menores",
+    "Consejo de la Carrera Judicial",
+    "Corte de Constitucionalidad (CC)",
+    "Ministerio Público (MP)",
+    "Instituto Nacional de Ciencias Forenses",
+    "Procurador de los Derechos Humanos (PDH)",
+    "Contraloria General de Cuentas (CGC)",
+    "Instituto de la Defensa Pública Penal (IDPP)"
+];
+
 module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy('css');
@@ -26,6 +40,17 @@ module.exports = function (eleventyConfig) {
 
             let collection = collectionApi.getFilteredByTags('datos').filter(function (item) {
                 return item.data.datos.Categoria === categoria;
+            });
+
+            return collection;
+        });
+    });
+
+    instituciones.forEach((institucion) => {
+        eleventyConfig.addCollection(institucion, function (collectionApi) {
+
+            let collection = collectionApi.getFilteredByTags('datos').filter(function (item) {
+                return item.data.datos.Institucion === institucion;
             });
 
             return collection;

@@ -68,51 +68,28 @@ tags:
 					<h3><i class="icon-material-outline-business-center"></i> Datasets</h3>
 				</div>
 
-				<!--div class="listings-container compact-list-layout">
+				<div class="listings-container compact-list-layout">
 					
 
-					<a href="single-job-page.html" class="job-listing">
+					{% for item in collections[ins.nombre] %}
 
-				
-						<div class="job-listing-details">
-
-				
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Python Developer</h3>
-
-							
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-location-on"></i> Berlin</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-						</div>
-
-			
-						<span class="bookmark-icon"></span>
-					</a>
-
-					<a href="single-job-page.html" class="job-listing">
+					<a href="{{item.url}}" class="job-listing">
 
 					
 						<div class="job-listing-details">
 
 							
 							<div class="job-listing-description">
-								<h3 class="job-listing-title">Junior Full Stack Developer</h3>
+								<h3 class="job-listing-title">{{item.data.datos.Nombre}}</h3>
 
 								
-								<div class="job-listing-footer">
+								<!--div class="job-listing-footer">
 									<ul>
 										<li><i class="icon-material-outline-location-on"></i> Berlin</li>
 										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
 										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
 									</ul>
-								</div>
+								</div-->
 							</div>
 
 						</div>
@@ -120,7 +97,9 @@ tags:
 						
 						<span class="bookmark-icon"></span>
 					</a>	
-				</div-->
+					{% endfor %}
+
+				</div>
 
 			</div>
 			<!-- Boxed List / End -->

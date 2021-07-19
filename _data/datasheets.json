@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "Institucion": "Organismo Judicial",
+        "Institucion": "Corte Suprema de Justicia (CSJ)",
         "EnlaceImagen": "https://raw.githubusercontent.com/RedCiudadana/Instituciones-Justiciapedia/gh-pages/1.-Corte-Suprema-de-Justicia-(CSJ).png",
         "Dependencia": "Organismo Judicial",
         "Categoria": "Pluralismo Juridico",
@@ -21,7 +21,7 @@
     },
     {
         "id": "2",
-        "Institucion": "Organismo Judicial",
+        "Institucion": "Corte Suprema de Justicia (CSJ)",
         "EnlaceImagen": "https://raw.githubusercontent.com/RedCiudadana/Instituciones-Justiciapedia/gh-pages/1.-Corte-Suprema-de-Justicia-(CSJ).png",
         "Dependencia": "Organismo Judicial",
         "Categoria": "Acceso a Justicia",

@@ -7848,11 +7848,11 @@ input:checked + .switch-button:before {
 	.banner-headline-alt h3 { font-size: 36px; line-height: 42px; }
 	.banner-headline-alt span { font-size: 22px; line-height: 32px; }
 
-	/* Photo Position */
+	/* Photo Position 
 	.intro-banner:after,
 	.intro-banner:before {
 	    background: rgba(250,250,250,0.9);
-	}
+	}*/
 
 	.intro-banner .background-image-container {
 		background-size: cover;
@@ -17152,7 +17152,14 @@ ul.dashboard-box-list > li:hover {
 	color:#fff!important;
 }
 
+.bg-gris{
+	background-color: #f0f5fb;
+}
 
+img{
+	display:block;
+	margin:auto;
+}
 
 
 

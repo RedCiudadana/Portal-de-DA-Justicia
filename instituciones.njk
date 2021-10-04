@@ -16,7 +16,7 @@ permalink: "instituciones/index.html"
 			<div class="col-md-12">
 				<div class="single-page-header-inner">
 					<div class="left-side">
-						
+						<div class="header-image"><a href="single-company-profile.html"><img src="/images/ELEMENTOS WEB/ELEMENTOS MEJORAS/ICONOS CON RECUADRO/ICONO-07.jpg" alt=""></a></div>
 						<div class="header-details">
 							<h3 style="color:#fff">Instituciones</h3>
 						</div>
@@ -27,189 +27,49 @@ permalink: "instituciones/index.html"
 	</div>
 </div>
 
-<!-- Page Content
-================================================== -->
-<div class="container">
-	<div class="row">
-		<div class="col-xl-3 col-lg-4">
-			<div class="sidebar-container">
-				
-				<!-- Location >
-				<div class="sidebar-widget">
-					<h3>Location</h3>
-					<div class="input-with-icon">
-						<div id="autocomplete-container">
-							<input id="autocomplete-input" type="text" placeholder="Location">
-						</div>
-						<i class="icon-material-outline-location-on"></i>
+<!-- Section -->
+<div class="section gray">
+	<div class="container">
+		<div class="row">
+		
+				{% for item in collections.ins %}	
+					<div class="col-12 col-lg-6">
+                    <!-- Blog Post -->
+                    <a href="{{item.data.hist.EnlaceWeb}}" target="_blank" class="blog-post">
+                        <!-- Blog Post Thumbnail -->
+                        <div class="blog-post-thumbnail">
+                            <div class="blog-post-thumbnail-inner">
+                                <span class="blog-item-tag">Tips</span>
+                                <img src="{{item.data.ins.fotoURL}}" alt="">
+                            </div>
+                        </div>
+                        <!-- Blog Post Content -->
+                        <div class="blog-post-content">
+                            <span class="blog-post-date">22 July 2019</span>
+                            <h3>{{item.data.ins.nombre}}</h3>
+                            <p>{{item.data.ins.sector}}</p>
+                        </div>
+                        <!-- Icon -->
+                        <div class="entry-icon"></div>
+                    </a>
 					</div>
-				</div-->
-
-				<!-- Category >
-				<div class="sidebar-widget">
-					<h3>Category</h3>
-					<select class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="All Categories" >
-						<option>Admin Support</option>
-						<option>Customer Service</option>
-						<option>Data Analytics</option>
-						<option>Design & Creative</option>
-						<option>Legal</option>
-						<option>Software Developing</option>
-						<option>IT & Networking</option>
-						<option>Writing</option>
-						<option>Translation</option>
-						<option>Sales & Marketing</option>
-					</select>
-				</div-->
-
-				<!-- Keywords >
-				<div class="sidebar-widget">
-					<h3>Tags</h3>
-					<div class="keywords-container">
-						<div class="keyword-input-container">
-							<input type="text" class="keyword-input" placeholder="e.j. justicia"/>
-							<button class="keyword-input-button ripple-effect"><i class="icon-material-outline-add"></i></button>
-						</div>
-						<div class="keywords-list"></div>
-						<div class="clearfix"></div>
-					</div>
-				</div-->
-
-				<!-- Hourly Rate >
-				<div class="sidebar-widget">
-					<h3>Hourly Rate</h3>
-					<div class="margin-top-55"></div>
-
-					< Range Slider >
-					<input class="range-slider" type="text" value="" data-slider-currency="$" data-slider-min="10" data-slider-max="250" data-slider-step="5" data-slider-value="[10,250]"/>
-				</div-->
-
-				<!--Tags >
-				<div class="sidebar-widget">
-					<h3>Tags</h3>
-
-					<div class="tags-container">
-						<div class="tag">
-							<input type="checkbox" id="tag1"/>
-							<label for="tag1">front-end dev</label>
-						</div>
-						<div class="tag">
-							<input type="checkbox" id="tag2"/>
-							<label for="tag2">angular</label>
-						</div>
-						<div class="tag">
-							<input type="checkbox" id="tag3"/>
-							<label for="tag3">react</label>
-						</div>
-						<div class="tag">
-							<input type="checkbox" id="tag4"/>
-							<label for="tag4">vue js</label>
-						</div>
-						<div class="tag">
-							<input type="checkbox" id="tag5"/>
-							<label for="tag5">web apps</label>
-						</div>
-						<div class="tag">
-							<input type="checkbox" id="tag6"/>
-							<label for="tag6">design</label>
-						</div>
-						<div class="tag">
-							<input type="checkbox" id="tag7"/>
-							<label for="tag7">wordpress</label>
-						</div>
-					</div>
-					<div class="clearfix"></div-->
-
-					<!-- More Skills >
-					<div class="keywords-container margin-top-20">
-						<div class="keyword-input-container">
-							<input type="text" class="keyword-input" placeholder="add more skills"/>
-							<button class="keyword-input-button ripple-effect"><i class="icon-material-outline-add"></i></button>
-						</div>
-						<div class="keywords-list">< keywords go here></div>
-						<div class="clearfix"></div>
-					</div-->
-				</div>
-				<div class="clearfix"></div>
-
-			</div>
-		</div>
-		<div class="col-xl-9 col-lg-8 content-left-offset" style="margin:auto">
-
-			<!--h3 class="page-title">Search Results</h3>
-
-			<div class="notify-box margin-top-15">
-				<div class="switch-container">
-					<label class="switch"><input type="checkbox"><span class="switch-button"></span><span class="switch-text">Turn on email alerts for this search</span></label>
-				</div>
-
-				<div class="sort-by">
-					<span>Sort by:</span>
-					<select class="selectpicker hide-tick">
-						<option>Relevance</option>
-						<option>Newest</option>
-						<option>Oldest</option>
-						<option>Random</option>
-					</select>
-				</div>
-			</div-->
-			<div class="paginate">
-			<!-- Freelancers List Container -->
-			<div class="freelancers-container freelancers-grid-layout margin-top-35" >
-                {% for item in collections.ins %}
-					<!--Freelancer -->
-					<div class="freelancer items">
-
-						<!-- Overview -->
-						<div class="freelancer-overview">
-							<div class="freelancer-overview-inner">
-								
-								<!-- Bookmark Icon -->
-								<span class="bookmark-icon"></span>
-								
-								<!-- Avatar -->
-                                <div class="freelancer-avatar">
-                                    <div class="verified-badge"></div>
-                                    <a href="{{item.url}}"><img src="{{item.data.ins.fotoURL}}" alt=""></a>
-                                </div>
-
-								<!-- Name -->
-								<div class="freelancer-name">
-									<h4><a href="{{item.url}}"> {{item.data.ins.nombre}} <img class="flag" src="images/flags/gb.svg" alt="" title="United Kingdom" data-tippy-placement="top"></a></h4>
-								</div>
-							</div>
-						</div>
-						
-						<!-- Details -->
-						<div class="freelancer-details">
-							
-							<a href="{{item.url}}" class="button button-sliding-icon ripple-effect">View Profile <i class="icon-material-outline-arrow-right-alt"></i></a>
-						</div>
-					</div>
-					<!-- Freelancer / End -->
+					
                     
                 {% endfor %}
 				
+				
 
-	
-			</div>
-			<!-- Freelancers Container / End -->
-
-
-			<!-- Pagination -->
-			<div class="pager pag" >
-				<div class="firstPage">&laquo;</div>
-				<div class="previousPage">&lsaquo;</div>
-				<div class="pageNumbers"></div>
-				<div class="nextPage">&rsaquo;</div>
-				<div class="lastPage">&raquo;</div>
-			</div>
-			<!-- Pagination / End -->
-			</div>
+			
 
 		</div>
 	</div>
+
+	<!-- Spacer -->
+	<div class="padding-top-40"></div>
+	<!-- Spacer -->
+
 </div>
+<!-- Section / End -->
 
 {% endblock %}
 

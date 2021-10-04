@@ -3000,14 +3000,14 @@ body #backtotop a {
 }
 
 .single-page-header .header-image {
-    height: 140px;
+    /*height: 140px;*/
     flex: 0 0 140px;
     margin-right: 35px;
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 3px 12px rgba(0,0,0,0.1);
     display: flex;
-    padding: 0 20px;
+    /*padding: 0 20px;*/
 }
 
 /* IE 11 Fixes */
@@ -14311,6 +14311,11 @@ a.apply-now-button i {
 	color: #fff!important;
 }
 
+.attachment-box-gen {
+	background-color: #006be3;
+	color: #fff;
+}
+
 .attachment-box-pdf {
 	background-color: #e90505;
 	color: #fff;
@@ -14342,7 +14347,7 @@ a.apply-now-button i {
 }
 
 .attachment-box:hover{
-	background-color: #222!important;
+	background-color: #13c992!important;
 }
 
 /*.single-page-section .attachment-box { flex: 0 1 calc(33% - 20px); }*/
@@ -17150,6 +17155,10 @@ ul.dashboard-box-list > li:hover {
 	margin: 5px;
 	text-align: center;
 	color:#fff!important;
+}
+
+.button{
+	background-color: #13c992!important;
 }
 
 

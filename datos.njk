@@ -90,7 +90,7 @@ permalink: "datasets/index.html"
 					<input class="range-slider" type="text" value="" data-slider-currency="$" data-slider-min="10" data-slider-max="250" data-slider-step="5" data-slider-value="[10,250]"/>
 				</div-->
 
-				<!-- Tags -->
+				<!-- Tags >
 				<div class="sidebar-widget">
 					<h3>Tags</h3>
 
@@ -110,7 +110,7 @@ permalink: "datasets/index.html"
 					</div>
 					<div class="clearfix"></div>
 
-					<!-- More Skills >
+					< More Skills >
 					<div class="keywords-container margin-top-20">
 						<div class="keyword-input-container">
 							<input type="text" class="keyword-input" placeholder="add more skills"/>
@@ -118,8 +118,8 @@ permalink: "datasets/index.html"
 						</div>
 						<div class="keywords-list">< keywords go here ></div>
 						<div class="clearfix"></div>
-					</div-->
-				</div>
+					</div>
+				</div-->
 				<div class="clearfix"></div>
 
 			</div>
@@ -181,16 +181,18 @@ permalink: "datasets/index.html"
 					</div>
 					
 					<!-- Details -->
-					<div class="freelancer-details">
+					<div class="freelancer-details" style="flex:0 0 260px!important">
 						<div class="freelancer-details-list">
 							<ul>
 								<!--li>Location <strong><i class="icon-material-outline-location-on"></i> London</strong></li>
 								<li>Rate <strong>$60 / hr</strong></li>
 								<li>Job Success <strong>95%</strong></li-->
-								<li>{{item.data.datos.Tags}}</li>
+								<li>{{item.data.datos.Categoria}}</li>
 							</ul>
 						</div>
-						<a href="{{item.url}}" class="button button-sliding-icon ripple-effect">Explorar<i class="icon-material-outline-arrow-right-alt"></i></a>
+						<div>
+							<a href="{{item.url}}" class="button button-sliding-icon ripple-effect">Explorar<i class="icon-material-outline-arrow-right-alt"></i></a>
+						</div>
 					</div>
 				</div>
 				<!-- Freelancer / End -->

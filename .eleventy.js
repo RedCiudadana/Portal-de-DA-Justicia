@@ -1,4 +1,4 @@
-//const searchFilter = require('./filters/searchFilter');
+const searchFilter = require('./filters/searchFilter');
 
 const categorias = [
     "Acceso a Justicia",
@@ -59,6 +59,7 @@ module.exports = function (eleventyConfig) {
         });
     });
 
+    eleventyConfig.addFilter("search", searchFilter);
     eleventyConfig.addCollection("datos", function(collectionApi) {
         return collectionApi.getFilteredByTag('datos');
     });

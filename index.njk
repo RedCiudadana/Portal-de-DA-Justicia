@@ -31,9 +31,9 @@ permalink: "index.html"
 		<!-- Search Bar -->
 		<div class="row">
 			<div class="col-md-12">
-				<div class="intro-banner-search-form">
+				<!--div class="intro-banner-search-form">
 
-					<!-- Search Field -->
+					<Search Field >
 					<div class="intro-search-field with-autocomplete">
 
 						<div class="input-with-icon">
@@ -42,11 +42,24 @@ permalink: "index.html"
 						</div>
 					</div>
 
-					<!-- Button -->
+					
+
+					< Button >
 					<div class="intro-search-button">
 						<button class="button ripple-effect" onclick="window.location.href='jobs-list-layout-full-page-map.html'">Buscar</button>
 					</div>
+				</div-->
+
+				<div class="field">
+					<label for="searchField" style="display:none">Search</label>
+					<input class="form-control mx-auto" type="search" placeholder="¿Qué datos buscás?" id="searchField" style="max-width: 650px;"/>
+					
 				</div>
+				<div id="searchResultsContainer" class="w-100 rounded bg-white shadow-sm mx-auto" style="max-width:650px;">
+					<ol id="searchResults" style="z-index: 20;margin-top:-1rem">
+					</ol>
+				</div>
+
 			</div>
 		</div>
 
@@ -119,185 +132,6 @@ permalink: "index.html"
 <!-- Category Boxes / End -->
 
 
-<!-- Features Jobs >
-<div class="section gray margin-top-45 padding-top-65 padding-bottom-75">
-	<div class="container">
-		<div class="row">
-			<div class="col-xl-12">
-				
-				< Section Headline >
-				<div class="section-headline margin-top-0 margin-bottom-35">
-					<h3>Datasets</h3>
-					<a href="/datasheet/index.html" class="headline-link">Busca más Datasets</a>
-				</div>
-				
-				< Jobs Container >
-				<div class="listings-container compact-list-layout margin-top-35">
-					
-					< Job Listing >
-					<a href="single-job-page.html" class="job-listing with-apply-button">
-
-						< Job Listing Details >
-						<div class="job-listing-details">
-
-							< Logo >
-							<div class="job-listing-company-logo">
-								<img src="images/company-logo-01.png" alt="">
-							</div>
-
-							< Details >
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Bilingual Event Support Specialist</h3>
-
-								< Job Listing Footer >
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-business"></i> Hexagon <div class="verified-badge" title="Verified Employer" data-tippy-placement="top"></div></li>
-										<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-							< Apply Button >
-							<span class="list-apply-button ripple-effect">Apply Now</span>
-						</div>
-					</a>	
-
-
-					<Job Listing >
-					<a href="single-job-page.html" class="job-listing with-apply-button">
-
-						< Job Listing Details >
-						<div class="job-listing-details">
-
-							< Logo>
-							<div class="job-listing-company-logo">
-								<img src="images/company-logo-05.png" alt="">
-							</div>
-
-							< Details >
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Competition Law Officer</h3>
-
-								<Job Listing Footer>
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-business"></i> Laxo</li>
-										<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-							< Apply Button >
-							<span class="list-apply-button ripple-effect">Apply Now</span>
-						</div>
-					</a>
-					< Job Listing >
-					<a href="single-job-page.html" class="job-listing with-apply-button">
-
-						< Job Listing Details>
-						<div class="job-listing-details">
-
-							< Logo >
-							<div class="job-listing-company-logo">
-								<img src="images/company-logo-02.png" alt="">
-							</div>
-
-							< Details>
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Barista and Cashier</h3>
-
-								< Job Listing Footer >
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-business"></i> Coffee</li>
-										<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-							< Apply Button >
-							<span class="list-apply-button ripple-effect">Apply Now</span>
-						</div>
-					</a>
-					
-
-					< Job Listing >
-					<a href="single-job-page.html" class="job-listing with-apply-button">
-
-						< Job Listing Details >
-						<div class="job-listing-details">
-
-							< Logo >
-							<div class="job-listing-company-logo">
-								<img src="images/company-logo-03.png" alt="">
-							</div>
-
-							< Details >
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Restaurant General Manager</h3>
-
-								< Job Listing Footer >
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-business"></i> King <div class="verified-badge" title="Verified Employer" data-tippy-placement="top"></div></li>
-										<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-							< Apply Button>
-							<span class="list-apply-button ripple-effect">Apply Now</span>
-						</div>
-					</a>
-
-					< Job Listing >
-					<a href="single-job-page.html" class="job-listing with-apply-button">
-
-						<Job Listing Details >
-						<div class="job-listing-details">
-
-							< Logo >
-							<div class="job-listing-company-logo">
-								<img src="images/company-logo-05.png" alt="">
-							</div>
-
-							< Details >
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">International Marketing Coordinator</h3>
-
-								< Job Listing Footer>
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-business"></i> Skyist</li>
-										<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-							< Apply Button>
-							<span class="list-apply-button ripple-effect">Apply Now</span>
-						</div>
-					</a>
-
-				</div>
-				< Jobs Container / End >
-
-			</div>
-		</div>
-	</div>
-</div>
-<Featured Jobs / End -->
 
 
 <!-- Features Cities -->
@@ -331,14 +165,57 @@ permalink: "index.html"
 </div>
 <!-- Features Cities / End -->
 
+<style>
+	#searchResults {
+	max-height: 10rem;
+	overflow: auto;
+	background: white;
+	width: 100%;
+	position: relative;
+	}
+</style>
+
 {% endblock %}
 
 {% block body_javascripts %}
 
-<script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+    <script>
+      (function(window, document) {
+      "use strict";
+      const search = e => {
+        const results = window.searchIndex.search(e.target.value);
+        const ol = document.getElementById("searchResults");
+        const searchResultsContainer = document.getElementById("searchResultsContainer");
+        ol.innerHTML = "";
+        searchResultsContainer.style.position = 'none';
+        if (results && results.length > 0) {
+          searchResultsContainer.style.position = 'absolute';
+          results.map(r => {
+            const { id, Nombre, Institucion } = r.doc;
+            // this is where you'll go wild with your own HTML injection.
+            const li = document.createElement("li");
+            ol.appendChild(li);
+            const a = document.createElement("a");
+            a.setAttribute("href", id);
+            a.textContent = `${Nombre}, ${Institucion}`;
+            li.appendChild(a);
+          });
+        }
+      };
+      fetch("/search-index.json").then(response =>
+        response.json().then(rawIndex => {
+          window.searchIndex = elasticlunr.Index.load(rawIndex);
+          document.getElementById("searchField").addEventListener("input", search);
+        })
+      );
+    })(window, document);
+    </script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 
- 
-</script>
+   
 
 {% endblock %}

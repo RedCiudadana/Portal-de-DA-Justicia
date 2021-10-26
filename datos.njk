@@ -71,13 +71,14 @@ permalink: "datasets/index.html"
 				<!-- Keywords -->
 				<div class="sidebar-widget">
 					<h3>Buscar</h3>
-					<div class="keywords-container">
-						<div class="keyword-input-container">
-							<input type="text" class="keyword-input" placeholder="e.j. justicia"/>
-							<button class="keyword-input-button ripple-effect"><i class="icon-material-outline-add"></i></button>
-						</div>
-						<div class="keywords-list"><!-- keywords go here --></div>
-						<div class="clearfix"></div>
+					<div class="field">
+						<label for="searchField" style="display:none">Search</label>
+						<input class="form-control mx-auto" type="search" placeholder="¿Qué datos buscás?" id="searchField" style="max-width: 300px;"/>
+						
+					</div>
+					<div id="searchResultsContainer" class="w-100 rounded bg-white shadow-sm mx-auto" style="max-width:300px;">
+						<ol id="searchResults" style="z-index: 20;">
+						</ol>
 					</div>
 				</div>
 
@@ -220,6 +221,16 @@ permalink: "datasets/index.html"
 	</div>
 </div>
 
+<style>
+	#searchResults {
+	max-height: 10rem;
+	overflow: auto;
+	background: white;
+	width: 100%;
+	position: relative;
+	}
+</style>
+
 {% endblock %}
 
 {% block body_javascripts %}
@@ -233,6 +244,44 @@ $(".paginate").paginga({
 
 });
 </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+<script>
+	(function(window, document) {
+	"use strict";
+	const search = e => {
+	const results = window.searchIndex.search(e.target.value);
+	const ol = document.getElementById("searchResults");
+	const searchResultsContainer = document.getElementById("searchResultsContainer");
+	ol.innerHTML = "";
+	searchResultsContainer.style.position = 'none';
+	if (results && results.length > 0) {
+		searchResultsContainer.style.position = 'absolute';
+		results.map(r => {
+		const { id, Nombre, Institucion } = r.doc;
+		// this is where you'll go wild with your own HTML injection.
+		const li = document.createElement("li");
+		ol.appendChild(li);
+		const a = document.createElement("a");
+		a.setAttribute("href", id);
+		a.textContent = `${Nombre}, ${Institucion}`;
+		li.appendChild(a);
+		});
+	}
+	};
+	fetch("/search-index.json").then(response =>
+	response.json().then(rawIndex => {
+		window.searchIndex = elasticlunr.Index.load(rawIndex);
+		document.getElementById("searchField").addEventListener("input", search);
+	})
+	);
+})(window, document);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 
 
 {% endblock %}

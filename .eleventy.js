@@ -30,6 +30,8 @@ const instituciones = [
 
 module.exports = function (eleventyConfig) {
 
+    eleventyConfig.setTemplateFormats("njk");
+
     eleventyConfig.addPassthroughCopy('css');
     eleventyConfig.addPassthroughCopy('fonts');
     eleventyConfig.addPassthroughCopy('images');

@@ -1,68 +1,55 @@
 ---
-permalink: "contacto/index.html"
+permalink: contacto/index.html
 ---
-
 {% extends "base.njk" %}
 
-{% block head %}{% endblock %}
+{% block head %}
+<title>Portal de Justicia Abierta | Contacto</title>
+<link rel="stylesheet" href="/css/main.css" type="text/css" />
+{% endblock %}
 
 {% block content %}
 
+    <!--SLIDER>  
+    <div class="w-100" style="background-color: #016be3">
+      <div class="container py-5" style="padding-bottom: 0.2rem!important;">
+        <div class="row mx-auto" style="justify-content:center;display: block!important;margin: 2rem 0;">
+          <div class="img-circular">
+            <img  src="/ELEMENTOS/NUEVOS ELEMENTOS/JA-04.png">  
+          </div>
+          <h1 style="color: #fff!important;text-align: center;">Contáctanos</h1>
+        </div>
+      </div>
+    </div-->  
+     
+    <!-- contact-address-area-strat -->
+    <div class="container pt-130 pb-130">
+      <div class="row">
+        <div class="col-lg-6 col-xl-6 col-sm-12 col-md-12 mb-40">
+          <h1 style="font-size:30px;" class="mb-20">Para más información de eventos, dudas o de nuestro trabajo</h1>
+          <p class="mb-20">Llena el siguiente formulario y nuestro equipo te estará contactando</p>
+          <h6 class="mb-20 text-left">Síguenos a través de nuestras redes sociales</h6>
+          <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <a href="https://www.facebook.com/Redciudadanagt"><img width="10%" src="/images/REDES-43.png"></a>
+                <a href="https://twitter.com/redxguate"><img width="10%" src="/images/REDES-44.png"></a>
+                <a href="https://www.instagram.com/redxguate/"><img width="10%" src="/images/REDES-45.png"></a>
+                <a href="https://www.youtube.com/channel/UCQwc62j7beStZYFzwPxBEQg"><img width="10%" src="/images/REDES-46.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xl-6 col-sm-12 col-md-12">
+          <form class="contact_form" id="form" target="_self" onsubmit="return postToForm();" action="" autocomplete="off">
+            <input id="name" name="entry.1064235632" type="string" required placeholder="Nombre Completo"/>
+            <input id="email" name="entry.1330832081" type="email" required placeholder="Correo Electrónico"/>
+            <input id="affair" name="entry.1233483376" type="string" placeholder="Asunto / Motivo de Contacto"/>
+            <textarea id="message" name="entry.608682247" type="string" required placeholder="Mensaje"></textarea>
+            <button id="send" type="submit" class="button">Envíanos un Mensaje</button>
+          </form>
 
-
-<!-- Content
-================================================== -->
-
-
-<!-- Container -->
-<div class="container">
-	<div class="row">
-
-		<div class="col-xl-8 col-lg-8 offset-xl-2 offset-lg-2" style="padding-top:4rem">
-
-			<!--section id="contact" class="margin-bottom-60">
-				<h2>Contáctanos</h2>
-				<br>
-				<br>
-				<h3 class="headline margin-top-15 margin-bottom-35">Any questions? Feel free to contact us!</h3>
-
-				<form method="post" name="contactform" id="contactform" autocomplete="on">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="input-with-icon-left">
-								<input class="with-border" name="name" type="text" id="name" placeholder="Your Name" required="required" />
-								<i class="icon-material-outline-account-circle"></i>
-							</div>
-						</div>
-
-						<div class="col-md-6">
-							<div class="input-with-icon-left">
-								<input class="with-border" name="email" type="email" id="email" placeholder="Email Address" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
-								<i class="icon-material-outline-email"></i>
-							</div>
-						</div>
-					</div>
-
-					<div class="input-with-icon-left">
-						<input class="with-border" name="subject" type="text" id="subject" placeholder="Subject" required="required" />
-						<i class="icon-material-outline-assignment"></i>
-					</div>
-
-					<div>
-						<textarea class="with-border" name="comments" cols="40" rows="5" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
-					</div>
-
-					<input type="submit" class="submit button margin-top-15" id="submit" value="Submit Message" />
-
-				</form>
-			</section-->
-
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdai1ArxHllxY8KyzpgXAN7YpaP38nvs43hRr0dI8tPuEp2Cg/viewform?embedded=true" width="640" height="542" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-
-		</div>
-
-	</div>
-</div>
-<!-- Container / End -->
+          <h3 id="success-msg" style="display:none;"> Su mensaje ha sido enviado</h3>
+        </div>
+      </div>
+    </div>
 
 {% endblock %}
